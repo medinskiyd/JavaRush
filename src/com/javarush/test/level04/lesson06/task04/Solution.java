@@ -1,24 +1,25 @@
 package com.javarush.test.level04.lesson06.task04;
 
-/* Сравнить имена
-Ввести с клавиатуры два имени, и если имена одинаковые вывести сообщение «Имена идентичны». Если имена разные, но их длины равны – вывести сообщение – «Длины имен равны».
+/* РЎСЂР°РІРЅРёС‚СЊ РёРјРµРЅР°
+Р’РІРµСЃС‚Рё СЃ РєР»Р°РІРёР°С‚СѓСЂС‹ РґРІР° РёРјРµРЅРё, Рё РµСЃР»Рё РёРјРµРЅР° РѕРґРёРЅР°РєРѕРІС‹Рµ РІС‹РІРµСЃС‚Рё СЃРѕРѕР±С‰РµРЅРёРµ В«РРјРµРЅР° РёРґРµРЅС‚РёС‡РЅС‹В». Р•СЃР»Рё РёРјРµРЅР° СЂР°Р·РЅС‹Рµ, РЅРѕ РёС… РґР»РёРЅС‹ СЂР°РІРЅС‹ вЂ“ РІС‹РІРµСЃС‚Рё СЃРѕРѕР±С‰РµРЅРёРµ вЂ“ В«Р”Р»РёРЅС‹ РёРјРµРЅ СЂР°РІРЅС‹В».
 */
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import java.util.Scanner;
 
 public class Solution
 {
     public static void main(String[] args) throws Exception
     {
-        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        String name1 = bf.readLine();
-        String name2 = bf.readLine();
-
-        if(name1.equals(name2)) {
-            System.out.println("Имена идентичны");
-        } else if(name1.length() == name2.length()) {
-            System.out.println("Длины имен равны");
+        Scanner scanner = new Scanner(System.in);
+        String name1 = scanner.nextLine();
+        String name2 = scanner.nextLine();
+        Boolean m =(name1.length() == name2.length());
+        {
+            if (name1.equals(name2))
+                System.out.println("РРјРµРЅР° РёРґРµРЅС‚РёС‡РЅС‹");
+            else
+            if (m)
+                System.out.println("Р”Р»РёРЅС‹ РёРјРµРЅ СЂР°РІРЅС‹");
         }
 
     }
